@@ -1,0 +1,12 @@
+{
+  "name": "{{name}}",
+  "version": "0.0.1",
+  "authors": [
+    "{{author}} {{email}}"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "susy": "~2.2.2"
+  }
+}

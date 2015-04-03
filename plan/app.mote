@@ -1,0 +1,19 @@
+require 'roda'
+
+Dir['./domain/*.rb'].each  { |rb| require rb }
+
+module {{name}}
+  class Webapp < Roda
+    use Rack::Session::Cookie, :secret => ENV['SECRET'] || SecureRandom.hex
+    use Rack::Static, :root => 'public'
+
+    plugin :render
+
+    route do |r|
+      # GET / request
+      r.root do
+        view('index')
+      end
+    end
+  end
+end
