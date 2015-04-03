@@ -4,7 +4,7 @@
     $ gn -i https://github.com/jvillarejo/roda-template
 
 ## Usage
-    $ gn roda
+    $ gn roda-template
 
 ## See also
 
