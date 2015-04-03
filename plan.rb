@@ -15,79 +15,83 @@ module Plan
     end
 
     def destination
-      'app.rb'
+      "#{folder_name}/app.rb"
+    end
+
+    def folder_name
+      name
     end
   end
 
   class Gemfile < App
     def destination
-      'Gemfile'
+      "#{folder_name}/Gemfile"
     end
   end
 
   class Config < App
     def destination
-      'config.ru'
+      "#{folder_name}/config.ru"
     end
   end
 
   class Index < App
     def destination
-      'views/index.erb'
+      "#{folder_name}/views/index.erb"
     end
   end
 
   class Layout < App
     def destination
-      'views/layout.erb'
+      "#{folder_name}/views/layout.erb"
     end
   end
 
-  class Public
+  class Public < App
     def destination
-      'public/.gitkeep'
+      "#{folder_name}/public/.gitkeep"
     end
   end
 
-  class Domain
+  class Domain < App
     def destination
-      'domain/.gitkeep'
+      "#{folder_name}/domain/.gitkeep"
     end
   end
 
-  class Js
+  class Js < App
     def destination
-      'assets/js/.gitkeep'
+      "#{folder_name}/assets/js/.gitkeep"
     end
   end
 
-  class Sass
+  class Sass < App
     def destination
-      'assets/sass/style.scss'
+      "#{folder_name}/assets/sass/style.scss"
     end
   end
 
   class Package < App
     def destination
-      'assets/package.json'
+      "#{folder_name}/assets/package.json"
     end 
   end
 
-  class Gulpfile
+  class Gulpfile < App
     def destination
-      'assets/gulpfile.js'
+      "#{folder_name}/assets/gulpfile.js"
     end
   end
 
   class Bower < App
     def destination
-      'assets/bower.json'
+      "#{folder_name}/assets/bower.json"
     end
   end
 
-  class Gitignore
+  class Gitignore < App
     def destination
-      '.gitignore'
+      "#{folder_name}/.gitignore"
     end
   end
 
